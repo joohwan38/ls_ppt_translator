@@ -26,7 +26,9 @@
     },
     "win": {
       "icon": "icons/app_icon.ico",
-      "target": ["nsis"]
+      "target": ["portable"],
+      "forceCodeSigning": false,
+      "verifyUpdateCodeSignature": false
     },
     "nsis": {
       "oneClick": false,
