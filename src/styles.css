@@ -1,0 +1,465 @@
+/* 기본 스타일: 폰트 일관성을 위해 Noto Sans 우선, Segoe UI 대체 */
+body {
+    font-family: 'Noto Sans', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 헤더 래퍼 - 그리드 방식 */
+.header-wrapper {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+/* 회사 로고 스타일 */
+.company-logo {
+    width: 120px;
+    height: auto;
+}
+
+/* 제목 스타일 */
+.header-wrapper h1 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    grid-column: 2;
+}
+
+/* 드롭 영역: 성능 최적화를 위해 transition 속성 제한 */
+.drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.drop-area:hover {
+    border-color: #4CAF50;
+    background-color: #f5f5f5;
+}
+
+.drop-area.active {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+    transform: scale(1.01);
+}
+
+.drop-area p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* 버튼 그룹: 반응형 및 균형 조정 */
+.button-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.half-width {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* 정보 컨테이너: 반응형 디자인 추가 */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#fileInfo, #stats {
+    flex: 1;
+    margin: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#fileInfo {
+    background-color: #e3f2fd;
+}
+
+#fileInfo p, #stats p {
+    margin: 5px 0;
+    color: #444;
+}
+
+#stats {
+    background-color: #e8f5e9;
+    display: none;
+}
+
+/* Ollama 정보 박스 스타일 추가 */
+.ollama-info {
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.ollama-info strong {
+    color: #d73a49;
+    font-size: 18px;
+}
+
+.ollama-info p {
+    margin: 10px 0;
+    color: #586069;
+}
+
+.download-link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 15px 0;
+    padding: 12px 24px;
+    border: 2px solid #0366d6;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #0366d6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 오류 정보: 목록 스타일 추가 */
+.error-info {
+    display: none;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff5f5;
+    border-left: 4px solid #f44336;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.error-info strong {
+    color: #d73a49;
+    font-size: 16px;
+}
+
+.error-info p {
+    margin: 10px 0;
+    color: #586069;
+}
+
+.error-info code {
+    background-color: #f8f8f8;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 90%;
+    color: #e36209;
+}
+
+.error-info ol {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+.error-info li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* 컨트롤 스타일 */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    min-width: 160px;
+    font-weight: 600;
+    color: #333;
+}
+
+select, input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+select:hover, input:hover {
+    border-color: #2196F3;
+}
+
+/* 버튼 스타일: 접근성 위해 focus 추가 */
+button {
+    padding: 12px 24px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #1976D2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+button:focus, select:focus, input:focus {
+    outline: 2px solid #2196F3;
+    outline-offset: 2px;
+}
+
+/* 진행 바 */
+.progress-container {
+    margin-top: 20px;
+    display: none;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.status {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 결과 영역 */
+.result {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+    background-color: #f0f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #bae6fd;
+}
+
+.result p {
+    margin-bottom: 15px;
+    color: #0369a1;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* 파일 버튼 스타일 개선 */
+.file-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+.file-button:hover {
+    background-color: #45a049;
+}
+
+/* 언어 선택 행 스타일 추가 */
+.language-selector-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.language-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-section label {
+    min-width: auto;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.language-section select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 언어 교환 버튼 스타일 */
+.swap-button {
+    padding: 10px 14px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.swap-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.swap-button:active {
+    transform: scale(0.95);
+}
+
+.swap-button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.swap-button:hover span {
+    transform: rotate(180deg);
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .drop-area {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-container {
+        flex-direction: column;
+    }
+    
+    .file-info, .stats {
+        flex: none;
+        width: 100%;
+    }
+    
+    .language-selector-row {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .language-section {
+        width: 100%;
+    }
+    
+    .swap-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    select, input {
+        width: 100%;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .half-width {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .controls {
+        padding: 15px;
+    }
+}
