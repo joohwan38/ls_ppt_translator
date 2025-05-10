@@ -54,7 +54,7 @@ ollama pull gemma3:12b
 ### MacOS 설치
 
 #### 방법 1: 미리 빌드된 앱 설치하기
-1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `파워포인트 번역기.dmg` 파일을 다운로드합니다.
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `ppt_translator.dmg` 파일을 다운로드합니다.
    - *만약 링크가 작동하지 않는다면 화면의 우측 사이드 메뉴 상단에 있으니 직접 저장소로 입장*
 2. 다운로드한 DMG 파일을 더블클릭하여 마운트합니다.
 3. `파워포인트 번역기.app`을 애플리케이션 폴더로 드래그합니다.
@@ -64,7 +64,7 @@ ollama pull gemma3:12b
 ### Windows 설치
 
 #### 방법 1: 미리 빌드된 앱 실행하기 (Portable)
-1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `파워포인트 번역기.exe` 파일을 다운로드합니다.
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `ppt_translator.exe` 파일을 다운로드합니다.
 2. 설치를 원하는 위치에 폴더를 생성하고 exe 파일을 이동합니다.
 3. 폴더 내의 `파워포인트 번역기.exe` 파일을 실행합니다.
 
