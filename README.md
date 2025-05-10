@@ -68,20 +68,6 @@ ollama pull gemma3:12b
 2. 설치를 원하는 위치에 폴더를 생성하고 exe 파일을 이동합니다.
 3. 폴더 내의 `ppt_translator.exe` 파일을 실행합니다.
 
-> **참고**: Windows용 자동 설치 스크립트는 현재 준비 중입니다.
-
-## 📁 프로젝트 구조
-```
-powerpoint-translator/
-├── index.html          # 메인 UI 파일
-├── styles.css          # 스타일시트
-├── main.js            # Electron 메인 프로세스
-├── preload.js         # IPC 통신 브릿지
-├── package.json       # 프로젝트 설정
-├── icons/             # 아이콘 및 로고
-│   └── line-studio-logo.jpg
-└── README.md
-```
 
 ## 🔧 사용 방법
 
