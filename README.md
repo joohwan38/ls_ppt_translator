@@ -12,6 +12,20 @@
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 </div>
 
+## 📑 목차
+- [개요](#-개요)
+- [주요 기능](#-주요-기능)
+- [설치 가이드](#-설치-가이드)
+  - [MacOS 설치](#macos-설치)
+  - [Windows 설치](#windows-설치)
+- [사용 방법](#-사용-방법)
+- [프로젝트 구조](#-프로젝트-구조)
+- [기술 스택](#-기술-스택)
+- [설정 옵션](#-설정-옵션)
+- [기여하기](#-기여하기)
+- [라이선스](#-라이선스)
+- [문의](#-문의)
+
 ## 📋 개요
 LINE Studio에서 개발한 파워포인트 문서 번역기는 Ollama AI 모델을 활용하여 .pptx 파일의 모든 텍스트를 자동으로 번역하는 도구입니다. 텍스트 상자, 표, 도형, 스마트아트 등 파워포인트 내의 모든 텍스트 요소를 찾아서 번역합니다.
 
@@ -24,34 +38,37 @@ LINE Studio에서 개발한 파워포인트 문서 번역기는 Ollama AI 모델
 - **번역 중단 기능**: 필요시 번역 프로세스 중단 가능
 - **파일 저장 및 열기**: 번역된 파일 즉시 저장 및 열기 기능
 
-## 🚀 빠른 시작
+## 🚀 설치 가이드
 
 ### 사전 요구사항
-1. [Node.js](https://nodejs.org/) (v14 이상)
-2. [Ollama](https://ollama.com/download) 설치 및 실행
-   ```bash
-   # Ollama 설치 후 실행
-   ollama serve
-   
-   # 사용할 모델 다운로드 (예: llama2)
-   ollama pull llama2
-   ```
-
-### 설치 및 실행
+[Ollama](https://ollama.com/download) 설치 및 실행이 필요합니다:
 ```bash
-# 저장소 클론
-git clone https://github.com/your-org/powerpoint-translator.git
-cd powerpoint-translator
+# Ollama 설치 후 실행
+ollama serve
 
-# 의존성 설치
-npm install
-
-# 개발 모드 실행
-npm start
-
-# 애플리케이션 빌드
-npm run build
+# 사용할 모델 다운로드 (예: llama2)
+ollama pull llama2
 ```
+
+### MacOS 설치
+
+#### 방법 1: 미리 빌드된 앱 설치하기
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `Korean.Translator.dmg` 파일을 다운로드합니다.
+   - *만약 링크가 작동하지 않는다면 화면의 우측 사이드 메뉴 상단에 있으니 직접 저장소로 입장*
+2. 다운로드한 DMG 파일을 더블클릭하여 마운트합니다.
+3. `Korean Translator.app`을 애플리케이션 폴더로 드래그합니다.
+4. 동봉된 readme.txt 파일을 읽어보세요.
+5. 최초 실행 시 다음과 같은 경고창이 뜰 수 있습니다. 아래와 같이 진행해 주세요:
+   - 시스템 환경설정 > 보안 및 개인 정보 보호에서 "확인 없이 열기" 버튼을 클릭합니다.
+
+### Windows 설치
+
+#### 방법 1: 미리 빌드된 앱 실행하기 (Portable)
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `Korean.Translator.win.exe` 파일을 다운로드합니다.
+2. 설치를 원하는 위치에 폴더를 생성하고 exe 파일을 이동합니다.
+3. 폴더 내의 `Korean Translator.exe` 파일을 실행합니다.
+
+> **참고**: Windows용 자동 설치 스크립트는 현재 준비 중입니다.
 
 ## 📁 프로젝트 구조
 ```
@@ -90,7 +107,7 @@ powerpoint-translator/
 - 번역이 완료되면 '번역된 파일 다운로드' 버튼으로 파일을 저장합니다
 - '저장된 파일 열기' 버튼으로 번역된 파일을 바로 열 수 있습니다
 
-## 🛠 기술 스택
+## 💻 기술 스택
 - **프론트엔드**: HTML5, CSS3, JavaScript
 - **백엔드**: Electron
 - **AI/ML**: Ollama (llama2, mistral 등)
