@@ -1,0 +1,135 @@
+# 파워포인트 문서 번역기
+
+<div align="center">
+  <img src="icons/line-studio-logo.jpg" alt="LINE Studio" width="200"/>
+  
+  <h3>PowerPoint Document Translator</h3>
+  <p>파워포인트 파일(.pptx)의 모든 텍스트를 AI를 활용하여 자동으로 번역하는 데스크톱 애플리케이션</p>
+  
+  ![Electron](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+</div>
+
+## 📋 개요
+LINE Studio에서 개발한 파워포인트 문서 번역기는 Ollama AI 모델을 활용하여 .pptx 파일의 모든 텍스트를 자동으로 번역하는 도구입니다. 텍스트 상자, 표, 도형, 스마트아트 등 파워포인트 내의 모든 텍스트 요소를 찾아서 번역합니다.
+
+## ✨ 주요 기능
+- **다양한 텍스트 요소 번역**: 텍스트 상자, 표, 도형, 스마트아트 등 모든 텍스트 번역
+- **다국어 지원**: 한국어, 영어, 일본어, 중국어, 태국어, 프랑스어, 독일어, 스페인어 등 지원
+- **언어 자동 감지**: 원본 언어를 자동으로 감지하여 번역
+- **캐싱 시스템**: 동일한 텍스트 반복 번역 방지로 성능 최적화
+- **실시간 진행률 표시**: 번역 진행 상황을 실시간으로 확인
+- **번역 중단 기능**: 필요시 번역 프로세스 중단 가능
+- **파일 저장 및 열기**: 번역된 파일 즉시 저장 및 열기 기능
+
+## 🚀 빠른 시작
+
+### 사전 요구사항
+1. [Node.js](https://nodejs.org/) (v14 이상)
+2. [Ollama](https://ollama.com/download) 설치 및 실행
+   ```bash
+   # Ollama 설치 후 실행
+   ollama serve
+   
+   # 사용할 모델 다운로드 (예: llama2)
+   ollama pull llama2
+   ```
+
+### 설치 및 실행
+```bash
+# 저장소 클론
+git clone https://github.com/your-org/powerpoint-translator.git
+cd powerpoint-translator
+
+# 의존성 설치
+npm install
+
+# 개발 모드 실행
+npm start
+
+# 애플리케이션 빌드
+npm run build
+```
+
+## 📁 프로젝트 구조
+```
+powerpoint-translator/
+├── index.html          # 메인 UI 파일
+├── styles.css          # 스타일시트
+├── main.js            # Electron 메인 프로세스
+├── preload.js         # IPC 통신 브릿지
+├── package.json       # 프로젝트 설정
+├── icons/             # 아이콘 및 로고
+│   └── line-studio-logo.jpg
+└── README.md
+```
+
+## 🔧 사용 방법
+
+### 1. 애플리케이션 실행
+- 애플리케이션을 실행하면 자동으로 Ollama 서버 연결 상태를 확인합니다
+- Ollama가 설치되어 있지 않거나 실행되지 않은 경우 안내 메시지가 표시됩니다
+
+### 2. 파일 업로드
+- 드래그 앤 드롭 또는 '파일 선택하기' 버튼으로 .pptx 파일을 업로드합니다
+- 업로드된 파일의 슬라이드 수와 텍스트 요소 개수가 표시됩니다
+
+### 3. 번역 설정
+- **원본 언어**: 자동 감지 또는 수동 선택
+- **번역 언어**: 번역할 대상 언어 선택
+- **Ollama 모델**: 사용할 AI 모델 선택
+
+### 4. 번역 실행
+- '번역 시작' 버튼을 클릭하여 번역을 시작합니다
+- 진행률 바와 상태 메시지로 진행 상황을 확인할 수 있습니다
+- 필요시 '번역 중지' 버튼으로 프로세스를 중단할 수 있습니다
+
+### 5. 결과 저장
+- 번역이 완료되면 '번역된 파일 다운로드' 버튼으로 파일을 저장합니다
+- '저장된 파일 열기' 버튼으로 번역된 파일을 바로 열 수 있습니다
+
+## 🛠 기술 스택
+- **프론트엔드**: HTML5, CSS3, JavaScript
+- **백엔드**: Electron
+- **AI/ML**: Ollama (llama2, mistral 등)
+- **파일 처리**: JSZip (PPTX 파일 파싱 및 생성)
+
+## 📝 설정 옵션
+
+### Ollama URL 변경
+기본값은 `http://localhost:11434`입니다. 다른 주소나 포트를 사용하는 경우 설정에서 변경할 수 있습니다.
+
+### 지원 언어
+- 한국어 (ko)
+- 영어 (en)
+- 일본어 (ja)
+- 중국어 간체 (zh)
+- 중국어 번체 (zh-TW)
+- 태국어 (th)
+- 프랑스어 (fr)
+- 독일어 (de)
+- 스페인어 (es)
+
+## 🤝 기여하기
+1. 이 저장소를 포크합니다
+2. 새로운 기능 브랜치를 생성합니다 (`git checkout -b feature/amazing-feature`)
+3. 변경사항을 커밋합니다 (`git commit -m 'Add some amazing feature'`)
+4. 브랜치에 푸시합니다 (`git push origin feature/amazing-feature`)
+5. Pull Request를 생성합니다
+
+## 📄 라이선스
+이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+
+## 🐛 버그 리포트
+버그를 발견하셨나요? [이슈 페이지](https://github.com/your-org/powerpoint-translator/issues)에서 새로운 이슈를 생성해주세요.
+
+## 📞 문의
+- Email: contact@linestudio.com
+- Website: https://linestudio.com
+
+---
+<div align="center">
+  Made with ❤️ by LINE Studio
+</div>
