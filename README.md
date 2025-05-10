@@ -1,7 +1,7 @@
 # 파워포인트 문서 번역기
 
 <div align="center">
-  <img src="icons/line-studio-logo.jpg" alt="LINE Studio" width="200"/>
+  <img src="src/line-studio-logo.jpg" alt="LINE Studio" width="200"/>
   
   <h3>PowerPoint Document Translator</h3>
   <p>파워포인트 파일(.pptx)의 모든 텍스트를 AI를 활용하여 자동으로 번역하는 데스크톱 애플리케이션</p>
