@@ -46,27 +46,26 @@ LINE Studio에서 개발한 파워포인트 문서 번역기는 Ollama AI 모델
 # Ollama 설치 후 실행
 ollama serve
 
-# 사용할 모델 다운로드 (예: llama2)
-ollama pull llama2
+# 사용할 모델 다운로드 (예: gemma3:12b)
+ollama pull gemma3:12b
 ```
 
 ### MacOS 설치
 
 #### 방법 1: 미리 빌드된 앱 설치하기
-1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `Korean.Translator.dmg` 파일을 다운로드합니다.
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `파워포인트 번역기.dmg` 파일을 다운로드합니다.
    - *만약 링크가 작동하지 않는다면 화면의 우측 사이드 메뉴 상단에 있으니 직접 저장소로 입장*
 2. 다운로드한 DMG 파일을 더블클릭하여 마운트합니다.
-3. `Korean Translator.app`을 애플리케이션 폴더로 드래그합니다.
-4. 동봉된 readme.txt 파일을 읽어보세요.
-5. 최초 실행 시 다음과 같은 경고창이 뜰 수 있습니다. 아래와 같이 진행해 주세요:
+3. `파워포인트 번역기.app`을 애플리케이션 폴더로 드래그합니다.
+4. 최초 실행 시 다음과 같은 경고창이 뜰 수 있습니다. 아래와 같이 진행해 주세요:
    - 시스템 환경설정 > 보안 및 개인 정보 보호에서 "확인 없이 열기" 버튼을 클릭합니다.
 
 ### Windows 설치
 
 #### 방법 1: 미리 빌드된 앱 실행하기 (Portable)
-1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `Korean.Translator.win.exe` 파일을 다운로드합니다.
+1. [Release 페이지](https://github.com/your-org/powerpoint-translator/releases)에서 최신 버전의 `파워포인트 번역기.exe` 파일을 다운로드합니다.
 2. 설치를 원하는 위치에 폴더를 생성하고 exe 파일을 이동합니다.
-3. 폴더 내의 `Korean Translator.exe` 파일을 실행합니다.
+3. 폴더 내의 `파워포인트 번역기.exe` 파일을 실행합니다.
 
 > **참고**: Windows용 자동 설치 스크립트는 현재 준비 중입니다.
 
