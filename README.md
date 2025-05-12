@@ -62,6 +62,7 @@ ollama pull gemma3:12b
    - 시스템 환경설정 > 보안 및 개인 정보 보호에서 "확인 없이 열기" 버튼을 클릭합니다.
 <img width="825" alt="439809034-6929e1ca-e017-4dbe-9022-c3c52c746760" src="https://github.com/user-attachments/assets/87cd9310-43ad-423c-a851-d5dae2964adc" />
 
+---
 
 ### Windows 설치
 
@@ -69,7 +70,7 @@ ollama pull gemma3:12b
 1. [Release 페이지](https://github.com/joohwan38/ls_ppt_translator/releases/tag/download)에서 최신 버전의 `ppt_translator.exe` 파일을 다운로드합니다.
 2. 설치를 원하는 위치에 폴더를 생성하고 exe 파일을 이동합니다.
 3. 폴더 내의 `ppt_translator.exe` 파일을 실행합니다.
-
+---
 
 ## 🔧 사용 방법
 
