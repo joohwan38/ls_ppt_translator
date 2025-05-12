@@ -60,6 +60,8 @@ ollama pull gemma3:12b
 3. `ppt_translator.app`을 애플리케이션 폴더로 드래그합니다.
 4. 최초 실행 시 다음과 같은 경고창이 뜰 수 있습니다. 아래와 같이 진행해 주세요:
    - 시스템 환경설정 > 보안 및 개인 정보 보호에서 "확인 없이 열기" 버튼을 클릭합니다.
+<img width="825" alt="439809034-6929e1ca-e017-4dbe-9022-c3c52c746760" src="https://github.com/user-attachments/assets/87cd9310-43ad-423c-a851-d5dae2964adc" />
+
 
 ### Windows 설치
 
